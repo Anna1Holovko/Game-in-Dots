@@ -10,25 +10,402 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"/>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>React App by anna</title>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+<div class="LeftBlock">
+  <div id="app"></div>
+  <div id="shn"></div>
+
+
+  <div class="App">
+    <input type="text" placeholder="Enter ur name" id="myInput" value="">
+    <button id="easyMode" class="selected" >Easy</button>
+    <button id ="normalMode">Normal</button>
+    <button id ="hardMode">Hard</button>
+    <button id="reset">Play</button>
+    <p></p>
+  <span id="message"></span>
+    <p>Your score: <a id="clicksUr"></a></p>
+    <p>Computer score: <a id="clicksC"></a></p>
+  </div>
+
+<!--  <form id="form" onsubmit='return onSubmit(this)'>-->
+<!--    <input name='winner' placeholder='user'><br>-->
+<!--&lt;!&ndash;    <input name='date' type='password' placeholder='password'><br>&ndash;&gt;-->
+<!--    <button type='submit'>Try</button>-->
+<!--  </form>-->
+
+  <div id="butt"></div>
+
+  <p></p>
+  <div id="squares">
+    <div class="square" onclick="colorChange"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+
+
+<!--  <div id="squares">-->
+<!--    <div id="square1" onclick="colorChange">-->
+<!--    </div>-->
+<!--    <div id="square2">-->
+<!--    </div>-->
+<!--    <div id="square3">-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+<!--  <button id="button">Click me</button>-->
+
+
+
+
+<!--  <div id="container">-->
+<!--      <div class="square"></div>-->
+<!--      <div class="square"></div>-->
+<!--      <div class="square"></div>-->
+<!--  </div>-->
+
+
+
+<!--<div id="container">-->
+<!--  <div id="containerE">-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--  </div>-->
+<!--  <div id="containerN">-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--  </div>-->
+<!--  <div id="containerH">-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--    <div class="square"></div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--  <form>-->
+<!--    <input name="name" placeholder="Enter your name">-->
+<!--    <input type="submit" value="Play">-->
+<!--  </form>-->
+
+
+<!--  <div id="wrapperBlock"></div>-->
+
+<!--  <div id="errors" style="-->
+<!--  background: #c00;-->
+<!--  color: #fff;-->
+<!--  display: none;-->
+<!--  margin: -20px -20px 20px;-->
+<!--  padding: 20px;-->
+<!--  white-space: pre-wrap;">-->
+
+<!--  </div>-->
+
+  <div id="root"></div>
+
+<!--  <script>-->
+<!--    window.addEventListener('mousedown', function(e) {-->
+<!--      document.body.classList.add('mouse-navigation');-->
+<!--      document.body.classList.remove('kbd-navigation');-->
+<!--    });-->
+<!--    window.addEventListener('keydown', function(e) {-->
+<!--      if (e.keyCode === 9) {-->
+<!--        document.body.classList.add('kbd-navigation');-->
+<!--        document.body.classList.remove('mouse-navigation');-->
+<!--      }-->
+<!--    });-->
+<!--    window.addEventListener('click', function(e) {-->
+<!--      if (e.target.tagName === 'A' && e.target.getAttribute('href') === '#') {-->
+<!--        e.preventDefault();-->
+<!--      }-->
+<!--    });-->
+<!--    window.onerror = function(message, source, line, col, error) {-->
+<!--      var text = error ? error.stack || error : message + ' (at ' + source + ':' + line + ':' + col + ')';-->
+<!--      errors.textContent += text + '\n';-->
+<!--      errors.style.display = '';-->
+<!--    };-->
+<!--    console.error = (function(old) {-->
+<!--      return function error() {-->
+<!--        errors.textContent += Array.prototype.slice.call(arguments).join(' ') + '\n';-->
+<!--        errors.style.display = '';-->
+<!--        old.apply(this, arguments);-->
+<!--      }-->
+<!--    })(console.error);-->
+<!--  </script>-->
+
+</div>
+<div class="RightBlock">
+
+<h1> Leader board</h1>
+  <div id="gname"></div>
+  <div id="leaderlist"></div>
+  <div id="namesh"></div>
+</div>
+
+<!--<div class="Appsh">-->
+<!--  <h1>hi </h1>-->
+<!--</div>-->
+
+
+
+
+
+
+<!--    <noscript>You need to enable JavaScript to run this app.</noscript>-->
+<!--    <div id="root"></div>-->
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +416,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
   </body>
 </html>
