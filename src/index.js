@@ -33,6 +33,19 @@ import * as serviceWorker from './serviceWorker';
 // }
 // export default Example1;
 
+var testForm = document.getElementById('test-form');
+testForm.onsubmit = function(event) {
+    event.preventDefault();
+
+    var request = new XMLHttpRequest();
+    // POST to httpbin which returns the POST data as JSON
+    request.open('POST', 'https://httpbin.org/post', /* async = */ false);
+
+    var formData = new FormData(document.getElementById('test-form'));
+    request.send(formData);
+
+    console.log(request.response);
+}
 
 class NameForm extends React.Component {
     constructor(props) {
@@ -88,7 +101,8 @@ function Square(props) {
     );
 }
 
-export const users =require('./data/posts')
+// export const users =require('./data/posts')
+const users = require('./data/posts')
 
 function UserItem(props){
     const user = props.user
@@ -144,6 +158,8 @@ var square = document.querySelectorAll(".square");
 var myInput = document.getElementById('myInput');
 var clicksUr = 0;
 var clicksC = 0;
+var fcolor = "white";
+// var random = 0;
 
 
 easyMode.addEventListener("click", function(){
@@ -153,6 +169,7 @@ easyMode.addEventListener("click", function(){
     for (var i = 0; i < square.length; i++) {
         square[i].style.background = "white";
         square[i].addEventListener("click", function () {
+            // this.setState({random:this.state.random + randomize});
             var clickedColor = this.style.background;
             var pickedColor = "blue";
             var fcolor = "white";
@@ -187,7 +204,6 @@ normalMode.addEventListener("click", function(){
         square[i].addEventListener("click", function () {
             var clickedColor = this.style.background;
             var pickedColor = "blue";
-            var fcolor = "white";
             if (clickedColor === pickedColor) {
                 resetButton.textContent = "Play Again";
                 clicksUr += 1;
@@ -225,7 +241,7 @@ hardMode.addEventListener("click", function(){
                 this.style.background = "green";
             } else {
                 this.style.background = "red";
-                messageDisplay.textContent = "Try Again";
+                // messageDisplay.textContent = "Try Again";
                 clicksC += 1;
                 document.getElementById("clicksC").innerHTML = clicksC;
             }
@@ -234,10 +250,15 @@ hardMode.addEventListener("click", function(){
 });
 
 resetButton.addEventListener("click", function(){
-    for (var i = 0; i < square.length; i++) {
+    resetButton.textContent = "Play";
+        for (var i = 0; i < square.length; i++) {
         square[i].style.background = "white";
+        document.getElementById("clicksUr").innerHTML = "";
+        document.getElementById("clicksC").innerHTML = "";
+        changeColors(fcolor);
     }
 })
+
 
 // //This picks a random square from the array and changes color
 const randomize = () => {
