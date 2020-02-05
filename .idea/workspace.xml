@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aadea34f-5917-4c04-b5d6-5107553a9dad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/customer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +99,7 @@
       <workItem from="1578901304204" duration="10168000" />
       <workItem from="1578942893546" duration="33031000" />
       <workItem from="1579256588704" duration="43558000" />
-      <workItem from="1580463013274" duration="13588000" />
+      <workItem from="1580463013274" duration="20225000" />
     </task>
     <task id="LOCAL-00001" summary="f commit">
       <created>1579187408129</created>
@@ -118,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579525556137</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="leader board with json request">
+      <created>1580903197841</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580903197841</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +131,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="f commit" />
     <MESSAGE value="s commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="s commit" />
+    <MESSAGE value="leader board with json request" />
+    <option name="LAST_COMMIT_MESSAGE" value="leader board with json request" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="192" key="#ESLint" timestamp="1578582400352">
@@ -143,10 +148,11 @@
     </state>
     <state x="578" y="260" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579166873609" />
     <state x="578" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.977@0.23.1680.977" timestamp="1578733429751" />
-    <state x="176" y="130" key="CommitChangelistDialog2" timestamp="1579525555966">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="176" y="144" key="CommitChangelistDialog2" timestamp="1580903197678">
+      <screen x="0" y="23" width="1680" height="981" />
     </state>
     <state x="176" y="130" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1579525555966" />
+    <state x="176" y="144" key="CommitChangelistDialog2/0.23.1680.981@0.23.1680.981" timestamp="1580903197678" />
     <state x="391" y="449" key="Github.CreateGistDialog" timestamp="1579187257158">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -187,10 +193,11 @@
     <state width="1638" height="221" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1578641844787" />
     <state width="769" height="192" key="GridCell.Tab.0.right/0.23.1680.975@0.23.1680.975" timestamp="1580496889521" />
     <state width="1638" height="217" key="GridCell.Tab.0.right/0.23.1680.978@0.23.1680.978" timestamp="1580229087663" />
-    <state x="184" y="266" key="Vcs.Push.Dialog.v2" timestamp="1579525626411">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="184" y="272" key="Vcs.Push.Dialog.v2" timestamp="1580903216456">
+      <screen x="0" y="23" width="1680" height="981" />
     </state>
     <state x="184" y="266" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1579525626411" />
+    <state x="184" y="272" key="Vcs.Push.Dialog.v2/0.23.1680.981@0.23.1680.981" timestamp="1580903216456" />
     <state x="496" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1578942895391">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

@@ -17,7 +17,6 @@ class LeaderList extends React.Component{
             })
             .catch(console.log)
     }
-
     render() {
         return (
             <div className="container" style={{
@@ -39,180 +38,7 @@ class LeaderList extends React.Component{
 }
 ReactDOM.render(<LeaderList/>, document.getElementById('leader2'));
 
-// class Appsh extends React.Component {
-//     render() {
-//         return (
-//             <div className="Appsh">
-//                 <Example1></Example1>
-//
-//             </div>
-//         );
-//     }
-// }
-//
-// export default Appsh;
 
-// const socialMediaList = data.SocialMedias;
-//
-// class Example1 extends React.Component {
-//     render() {
-//         return (
-//             <div className="Appsh">
-//             <ul>
-//                 {socialMediaList.map(s => (<li>{s}</li>))}
-//             </ul>
-//             </div>
-//         );
-//     }
-// }
-// export default Example1;
-
-var testForm = document.getElementById('test-form');
-testForm.onsubmit = function(event) {
-    event.preventDefault();
-
-    var request = new XMLHttpRequest();
-    // POST to httpbin which returns the POST data as JSON
-    request.open('POST', 'https://httpbin.org/post', /* async = */ false);
-
-    var formData = new FormData(document.getElementById('test-form'));
-    request.send(formData);
-
-    console.log(request.response);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-const fs = require('browserify-fs')
-
-
-// var saveData = (function () {
-//     var a = document.createElement("a");
-//     document.body.appendChild(a);
-//     a.style = "display: none";
-//     return function (data, fileName) {
-//         var json = JSON.stringify(data),
-//             blob = new Blob([json], {type: "octet/stream"}),
-//             url = window.URL.createObjectURL(blob);
-//         a.href = url;
-//         a.download = fileName;
-//         a.click();
-//         window.URL.revokeObjectURL(url);
-//     };
-// }());
-// var data = { x: document.getElementById(myInput), s: "hellokkkk, world", d: new Date() },
-//     fileName = "customer.json";
-// saveData(data, fileName);
-
-
-
-
-// var saveData = (function (data,fileName) {
-//     var a = document.createElement("a");
-//     document.body.appendChild(a);
-//     a.style = "display: none";
-//         // a.click();
-//         document.getElementById("btn").addEventListener("click", function () {
-//             var json = JSON.stringify(data),
-//                 blob = new Blob([json], {type: "octet/stream"}),
-//                 url = window.URL.createObjectURL(blob);
-//             a.href = url;
-//             a.download = fileName;
-//
-//         })
-//     var data = { x: document.getElementById(myInput), s: "hellokkkk, world", d: new Date() },
-//         fileName = "customer.json";
-// }());
-// saveData();
-
-
-
-
-
-
-
-
-
-
-
-// some JS object for testing
-
-// const someObject = {
-//     prop1: 0,
-//     prop2: 100
-// }
-//
-// // fs is a module of nodejs to interact with file system
-// // we specify the file name and the stringified JSON object
-// // as well as a callback to handle a possible error
-// fs.writeFile('./myfile.json', JSON.stringify(someObject), (err) => {
-//     if (err) throw err
-//     console.log('The file has been saved!')
-// })
-
-
-
-
-
-
-
-
-
-
-class NameForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
-        this.state = {isToggleOn: true};
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    handleSubmit(event) {
-        // alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
-    }
-
-    handleClick() {
-        this.setState(prevState => ({
-            isToggleOn: !prevState.isToggleOn
-        }));
-    }
-
-    render() {
-        return (
-            <form onSubmit={this.handleSubmit}>
-                {/*<select value={this.state.mygame}>*/}
-                {/*    <option>Pick game mode</option>*/}
-                {/*    <option value="easyl">Easy</option>*/}
-                {/*    <option value="normal">Normal</option>*/}
-                {/*    <option value="hardl">Hard</option>*/}
-                {/*</select>*/}
-                {/*<input type="text" placeholder={"Enter your name"} />*/}
-                {/*<button onClick={this.handleClick}>{this.state.isToggleOn ? 'Play' : 'Play again '}</button>*/}
-            </form>
-        );
-    }
-}
-
-ReactDOM.render(
-    <NameForm />,
-    document.getElementById('butt')
-);
 
 function Square(props) {
     return (
@@ -221,54 +47,6 @@ function Square(props) {
         </button>
     );
 }
-
-// export const users =require('./data/posts')
-// const users = require('./data/posts')
-// // const users = fetch('https://starnavi-frontend-test-task.herokuapp.com/winners')
-//
-// function UserItem(props){
-//     const user = props.user
-//     return (<li>{user.winner}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.date}</li>)
-// }
-//
-// function UserList(props){
-//     const users = props.users;
-//     const items = users.map((user) => {
-//         return <UserItem key={`${user.id}`} user={user}/>;
-//     });
-//     return (<ul>{items}</ul>);
-// }
-//
-// ReactDOM.render(<UserList users={users}/>, document.getElementById('namesh'));
-
-
-
-// function Showurname() {
-//     let [name, setName] = useState("");
-//
-//     let nameRef = useRef();
-//
-//     const submitButton = () => {
-//         setName(nameRef.current.value);
-//     };
-//
-//     return (
-//         <div className="App">
-//             <div>
-//                 <input ref={nameRef} type="text" placeholder={"Enter your name"} />
-//                 &nbsp;&nbsp;&nbsp;
-//                 <button type="button" onClick={submitButton}>
-//                     Play
-//                 </button>
-//                 <p>{name}</p>
-//             </div>
-//         </div>
-//     );
-// }
-// const rootElement = document.getElementById("shn");
-// ReactDOM.render(<Showurname />, rootElement);
-
-
 
 // var field = 25;
 var messageDisplay = document.querySelector("#message");
@@ -302,7 +80,7 @@ easyMode.addEventListener("click", function(){
                 resetButton.textContent = "Play Again";
                 clicksUr += 1;
                 document.getElementById("clicksUr").innerHTML = clicksUr;
-                if (clicksUr > 15){
+                if (clicksUr > 3){
                     messageDisplay.textContent = "Winner: " + myInput.value;
                 }else {
                     messageDisplay.textContent = "";
@@ -310,12 +88,13 @@ easyMode.addEventListener("click", function(){
                 // changeColors(fcolor);
                 setTimeout(randomize, 2000);
                 this.style.background = "green";
-            } else {
-                this.style.background = "null";
-                // messageDisplay.textContent = "Try Again";
-                clicksC += 1;
-                document.getElementById("clicksC").innerHTML = clicksC;
             }
+                // else {
+            //     this.style.background = "null";
+            //     // messageDisplay.textContent = "Try Again";
+            //     clicksC += 1;
+            //     document.getElementById("clicksC").innerHTML = clicksC;
+            // }
         })
     }
 });
@@ -342,7 +121,6 @@ normalMode.addEventListener("click", function(){
             }
         })
     }
- // new String(myInput)
 
 });
 
@@ -372,13 +150,14 @@ hardMode.addEventListener("click", function(){
 });
 
 resetButton.addEventListener("click", function(){
-    resetButton.textContent = "Play";
-        for (var i = 0; i < square.length; i++) {
-        square[i].style.background = "white";
-        document.getElementById("clicksUr").innerHTML = "";
-        document.getElementById("clicksC").innerHTML = "";
-        changeColors(fcolor);
-    }
+    this.setState(this.baseState)
+    // resetButton.textContent = "Play";
+    //     for (var i = 0; i < square.length; i++) {
+    //     square[i].style.background = "white";
+    //     document.getElementById("clicksUr").innerHTML = "";
+    //     document.getElementById("clicksC").innerHTML = "";
+    //     changeColors(fcolor);
+    // }
 })
 
 
