@@ -4,6 +4,40 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+class LeaderList extends React.Component{
+    state = {
+        todos: []
+    }
+    componentDidMount() {
+        fetch('https://starnavi-frontend-test-task.herokuapp.com/winners')
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({ todos: data })
+                console.log(this.state.todos)
+            })
+            .catch(console.log)
+    }
+
+    render() {
+        return (
+            <div className="container" style={{
+                marginLeft: '350px',
+            }}>
+                <div className="col-xs-12">
+                    <h1>Leader Board</h1>
+                    {this.state.todos.map((todo) => (
+                        <div className="card">
+                            <div className="card-body">
+                                <li> {todo.winner}&nbsp;&nbsp;&nbsp;{todo.date}</li>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    }
+}
+ReactDOM.render(<LeaderList/>, document.getElementById('leader2'));
 
 // class Appsh extends React.Component {
 //     render() {
@@ -46,6 +80,93 @@ testForm.onsubmit = function(event) {
 
     console.log(request.response);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+const fs = require('browserify-fs')
+
+
+// var saveData = (function () {
+//     var a = document.createElement("a");
+//     document.body.appendChild(a);
+//     a.style = "display: none";
+//     return function (data, fileName) {
+//         var json = JSON.stringify(data),
+//             blob = new Blob([json], {type: "octet/stream"}),
+//             url = window.URL.createObjectURL(blob);
+//         a.href = url;
+//         a.download = fileName;
+//         a.click();
+//         window.URL.revokeObjectURL(url);
+//     };
+// }());
+// var data = { x: document.getElementById(myInput), s: "hellokkkk, world", d: new Date() },
+//     fileName = "customer.json";
+// saveData(data, fileName);
+
+
+
+
+// var saveData = (function (data,fileName) {
+//     var a = document.createElement("a");
+//     document.body.appendChild(a);
+//     a.style = "display: none";
+//         // a.click();
+//         document.getElementById("btn").addEventListener("click", function () {
+//             var json = JSON.stringify(data),
+//                 blob = new Blob([json], {type: "octet/stream"}),
+//                 url = window.URL.createObjectURL(blob);
+//             a.href = url;
+//             a.download = fileName;
+//
+//         })
+//     var data = { x: document.getElementById(myInput), s: "hellokkkk, world", d: new Date() },
+//         fileName = "customer.json";
+// }());
+// saveData();
+
+
+
+
+
+
+
+
+
+
+
+// some JS object for testing
+
+// const someObject = {
+//     prop1: 0,
+//     prop2: 100
+// }
+//
+// // fs is a module of nodejs to interact with file system
+// // we specify the file name and the stringified JSON object
+// // as well as a callback to handle a possible error
+// fs.writeFile('./myfile.json', JSON.stringify(someObject), (err) => {
+//     if (err) throw err
+//     console.log('The file has been saved!')
+// })
+
+
+
+
+
+
+
+
+
 
 class NameForm extends React.Component {
     constructor(props) {
@@ -102,22 +223,23 @@ function Square(props) {
 }
 
 // export const users =require('./data/posts')
-const users = require('./data/posts')
-
-function UserItem(props){
-    const user = props.user
-    return (<li>{user.winner}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.date}</li>)
-}
-
-function UserList(props){
-    const users = props.users;
-    const items = users.map((user) => {
-        return <UserItem key={`${user.id}`} user={user}/>;
-    });
-    return (<ul>{items}</ul>);
-}
-
-ReactDOM.render(<UserList users={users}/>, document.getElementById('namesh'));
+// const users = require('./data/posts')
+// // const users = fetch('https://starnavi-frontend-test-task.herokuapp.com/winners')
+//
+// function UserItem(props){
+//     const user = props.user
+//     return (<li>{user.winner}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.date}</li>)
+// }
+//
+// function UserList(props){
+//     const users = props.users;
+//     const items = users.map((user) => {
+//         return <UserItem key={`${user.id}`} user={user}/>;
+//     });
+//     return (<ul>{items}</ul>);
+// }
+//
+// ReactDOM.render(<UserList users={users}/>, document.getElementById('namesh'));
 
 
 
@@ -164,7 +286,7 @@ var fcolor = "white";
 
 easyMode.addEventListener("click", function(){
     setTimeout(randomize, 2000);
-    easyMode.classList.add("selected");
+    // easyMode.classList.add("selected");
     // field = 25;
     for (var i = 0; i < square.length; i++) {
         square[i].style.background = "white";
@@ -175,7 +297,8 @@ easyMode.addEventListener("click", function(){
             var fcolor = "white";
             var gcolor="green";
             if (clickedColor === pickedColor) {
-                messageDisplay.textContent = "Good Job!";
+                // this.setState({background: this.style.background});
+                // messageDisplay.textContent = "Good Job!";
                 resetButton.textContent = "Play Again";
                 clicksUr += 1;
                 document.getElementById("clicksUr").innerHTML = clicksUr;
@@ -188,7 +311,7 @@ easyMode.addEventListener("click", function(){
                 setTimeout(randomize, 2000);
                 this.style.background = "green";
             } else {
-                this.style.background = "red";
+                this.style.background = "null";
                 // messageDisplay.textContent = "Try Again";
                 clicksC += 1;
                 document.getElementById("clicksC").innerHTML = clicksC;
@@ -219,8 +342,7 @@ normalMode.addEventListener("click", function(){
             }
         })
     }
-
-
+ // new String(myInput)
 
 });
 
@@ -263,6 +385,7 @@ resetButton.addEventListener("click", function(){
 // //This picks a random square from the array and changes color
 const randomize = () => {
     let randomSquare = square[Math.floor(Math.random() * square.length)];
+
     randomSquare.style.background = "blue";
 }
 
